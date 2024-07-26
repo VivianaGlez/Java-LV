@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+public class informacion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //sacar menu de opciones
+        System.out.println("Elige una opcion:");
+        System.out.println("1. Artista");
+        System.out.println("2. Película");
+        System.out.println("3. Serie");
+        System.out.println("4. Libro");
+        System.out.println("5. Videojuego");
+        System.out.print("Ingrese el número de la opcion: ");
+        int opcion = scanner.nextInt();
+        scanner.nextLine(); 
+        // pedir el nombre del libro, artista, etc
+        System.out.print("Ingresa el nombre del artista, película, serie, libro, o videojuego: ");
+        String eleccion = scanner.nextLine();
+
+        //dar informacion 
+        switch (opcion) {
+            case 1:
+                // artistas 
+                if ("Duki".equalsIgnoreCase(eleccion)) {
+                    System.out.println("Es un cantante, compositor y rapero argentino. Se le acredita el haber popularizado el género del trap a nivel nacional, siendo precursor de la explosión del trap latino en Argentina y Sudamérica.");
+                } else if ("Junior H".equalsIgnoreCase(eleccion)) {
+                    System.out.println("Es un cantante y compositor mexicano. Se especializa en el subgénero de corridos tumbados, popularizando el género con sus primeros álbumes de estudio");
+                } else {
+                    System.out.println("Artista no disponible.");
+                }
+                break;
+            case 2:
+                // películas
+                if ("Maze Runner".equalsIgnoreCase(eleccion)) {
+                    System.out.println("Maze Runner es una trilogía de películas de ciencia ficción, acción y aventura, basadas en la saga de novelas The Maze Runner, del autor estadounidense James Dashner.");
+                } else if ("Scream".equalsIgnoreCase(eleccion)) {
+                    System.out.println("Scream es una franquicia de películas de asesinatos de misterio y slasher estadounidense que incluye seis películas, una serie de televisión, productos, y juegos.");
+                } else {
+                    System.out.println("Película no disponible.");
+                }
+                break;
+            case 3:
+                // series
+                if ("You".equalsIgnoreCase(eleccion)) {
+                    System.out.println("Un hombre encantador y muy peligroso toma medidas extremas para introducirse en la vida de las mujeres de las que se enamora.");
+                } else if ("Teen Wolf".equalsIgnoreCase(eleccion)) {
+                    System.out.println(" Es un drama sobrenatural que sigue a Scott McCall, un estudiante cuya vida cambia totalmente al ser mordido por un hombre lobo.");
+                } else {
+                    System.out.println("Serie no disponible.");
+                }
+                break;
+            case 4:
+                // libros
+                if ("Un beso bajo la lluvia".equalsIgnoreCase(eleccion)) {
+                    System.out.println("Lluvia y sol. Chocolate y menta. Multicolor y monocromo. Positivo y negativo. Así son Floyd y Felix; dos opuestos que alguna vez fueron inseparables. Pero de su inocente amistad, solo quedan recuerdos.");
+                } else if ("Damian".equalsIgnoreCase(eleccion)) {
+                    System.out.println("Padme ha vivido durante toda su vida en el pueblo de Asfil. Es una chica normal, buena. O eso parece. En el fondo tiene varios secretos, y uno de ellos se llama Damián.");
+                } else {
+                    System.out.println("Información sobre el libro no disponible.");
+                }
+                break;
+            case 5:
+                // Información sobre videojuegos
+                if ("The Legend of Zelda".equalsIgnoreCase(eleccion)) {
+                    System.out.println("The Legend of Zelda es una serie de videojuegos de aventuras creada por Nintendo.");
+                } else if ("Minecraft".equalsIgnoreCase(eleccion)) {
+                    System.out.println("Minecraft es un videojuego de construcción y aventuras desarrollado por Mojang.");
+                } else {
+                    System.out.println("Información sobre el videojuego no disponible.");
+                }
+                break;
+            default:
+                System.out.println("Opción inválida. Seleccione un número del 1 al 5.");
+                break;
+        }
+
+        // Cerrar el scanner
+        scanner.close();
+    }
+}
