@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class numprimos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);        
+        // ingresar un numero entero
+        System.out.print("Ingresa un número entero: ");
+        int numero = scanner.nextInt();      
+        // determinar si el numero es primo
+        boolean resultado = esPrimo(numero);      
+        // Dar resultado
+        if (resultado) {
+            System.out.println("El número " + numero + " es primo.");
+        } else {
+            System.out.println("El número " + numero + " no es primo.");
+        }       
+        scanner.close();
+    }    
+    // determina si un número es primo
+    public static boolean esPrimo(int numero) {      
+        if (numero < 2) {
+            return false;
+        }
+        //el numero es divisible por algun numero menor que el mismo
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
