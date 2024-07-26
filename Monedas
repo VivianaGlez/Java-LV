@@ -1,0 +1,81 @@
+import java.util.Scanner;
+public class Monedas{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Pedir cantidad en pesos mexicanos
+        System.out.print("Ingresa la cantidad en pesos mexicanos: ");
+        double pesosmexicanos = scanner.nextDouble();
+        // Mostrar el menú de opciones
+        System.out.println("Selecciona la moneda a que desea convertir:");
+        System.out.println("1. Dólar (USD)");
+        System.out.println("2. Euro (EUR)");
+        System.out.println("3. Bath (THB)");
+        System.out.println("4. Yen (JPY)");
+        System.out.println("5. Won (KRW)");
+        System.out.println("6. Dólar Australiano (AUD)");
+        System.out.println("7. Sol (PEN)");
+        System.out.println("8. Dólar Canadiense (CAD)");
+        System.out.println("9. Bolívar (VES)");
+        System.out.println("10. Peso Argentino (ARS)");
+        System.out.print("Ingrese el número de la opción seleccionada: ");
+        int opcion = scanner.nextInt();
+        double tasaUSD = 0.056; // 1 MXN = 0.056 USD
+        double tasaEUR = 0.051; // 1 MXN = 0.051 EUR
+        double tasaTHB = 1.91;  // 1 MXN = 1.91 THB
+        double tasaJPY = 7.61;  // 1 MXN = 7.61 JPY
+        double tasaKRW = 74.17; // 1 MXN = 74.17 KRW
+        double tasaAUD = 0.083; // 1 MXN = 0.083 AUD
+        double tasaPEN = 0.208; // 1 MXN = 0.208 PEN
+        double tasaCAD = 0.074; // 1 MXN = 0.074 CAD
+        double tasaVES = 2.37;  // 1 MXN = 2.37 VES
+        double tasaARS = 0.752; // 1 MXN = 0.752 ARS
+        // convertir segun la eleccion 
+        double cantidadConvertida;
+        switch (opcion) {
+            case 1:
+                cantidadConvertida = pesosmexicanos * tasaUSD;
+                System.out.printf("La cantidad en Dólares (USD) es: %.2f%n", cantidadConvertida);
+                break;
+            case 2:
+                cantidadConvertida = pesosmexicanos * tasaEUR;
+                System.out.printf("La cantidad en Euros (EUR) es: %.2f%n", cantidadConvertida);
+                break;
+            case 3:
+                cantidadConvertida = pesosmexicanos * tasaTHB;
+                System.out.printf("La cantidad en Bath (THB) es: %.2f%n", cantidadConvertida);
+                break;
+            case 4:
+                cantidadConvertida = pesosmexicanos * tasaJPY;
+                System.out.printf("La cantidad en Yen (JPY) es: %.2f%n", cantidadConvertida);
+                break;
+            case 5:
+                cantidadConvertida = pesosmexicanos * tasaKRW;
+                System.out.printf("La cantidad en Won (KRW) es: %.2f%n", cantidadConvertida);
+                break;
+            case 6:
+                cantidadConvertida = pesosmexicanos * tasaAUD;
+                System.out.printf("La cantidad en Dólares Australianos (AUD) es: %.2f%n", cantidadConvertida);
+                break;
+            case 7:
+                cantidadConvertida = pesosmexicanos * tasaPEN;
+                System.out.printf("La cantidad en Soles (PEN) es: %.2f%n", cantidadConvertida);
+                break;
+            case 8:
+                cantidadConvertida = pesosmexicanos * tasaCAD;
+                System.out.printf("La cantidad en Dólares Canadienses (CAD) es: %.2f%n", cantidadConvertida);
+                break;
+            case 9:
+                cantidadConvertida = pesosmexicanos * tasaVES;
+                System.out.printf("La cantidad en Bolívares (VES) es: %.2f%n", cantidadConvertida);
+                break;
+            case 10:
+                cantidadConvertida = pesosmexicanos * tasaARS;
+                System.out.printf("La cantidad en Pesos Argentinos (ARS) es: %.2f%n", cantidadConvertida);
+                break;
+            default:
+                System.out.println("Opción seleccionada invalida. Selecciona un número del 1 al 10.");
+                break;
+        }     
+        scanner.close();
+    }
+}
